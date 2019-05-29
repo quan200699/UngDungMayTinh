@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h1>CALCULATOR</h1>
+<form>
+    <table>
+        <tr>
+            <th colspan="2"><input id="SoThuNhat" type="text"/></th>
+            <th colspan="2" ><input id="SoThuHai" type="text"/></th>
+        </tr>
+        <tr>
+            <th ><input type="button" id="+" onclick="Operator(this.value)" value="Addition(+)"></input></th>
+            <th ><input type="button" id="-" onclick="Operator(this.value)" value="Subtraction(-)"></input></th>
+            <th ><input type="button" id="*" onclick="Operator(this.value)" value="Multiplitation(*)"></input></th>
+            <th ><input type="button" id="/" onclick="Operator(this.value)" value="Division(/)"></input></th>
+        </tr>
+    </table>
+</form>
+<p id="Result"></p>
+<script>
+    function Operator(Value) {
+        var result;
+        var so1 = eval(document.getElementById('SoThuNhat').value);
+        var so2 =eval(document.getElementById('SoThuHai').value);
+        if(Value=="Addition(+)")
+        {
+            result = so1 + so2;
+            document.getElementById('Result').innerHTML = "Result Addition:" + result;
+        }
+        if(Value=="Subtraction(-)")
+        {
+            result = so1 - so2;
+            document.getElementById('Result').innerHTML = "Result Subtraction:" + result;
+        }
+        if(Value=="Multiplitation(*)")
+        {
+            result = so1 * so2;
+            document.getElementById('Result').innerHTML = "Result Multiplitation:" + result;
+        }
+        if(Value=="Division(/)")
+        {
+            result = so1 / so2;
+            document.getElementById('Result').innerHTML = "Result Division:" + result;
+        }
+    }
+</script>
+</body>
+</html>
